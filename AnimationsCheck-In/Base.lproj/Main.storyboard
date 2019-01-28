@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationsCheck_In" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-GD-3cZ">
+                                <rect key="frame" x="20" y="443.5" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qdf-eq-uX1">
+                                <rect key="frame" x="8" y="524.5" width="359" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="F8R-R1-V4F"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UY-gV-pep">
+                                <rect key="frame" x="137.5" y="293.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="V9H-z5-0VI"/>
+                                    <constraint firstAttribute="width" constant="100" id="ot9-Rd-6nX"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cat"/>
+                                <connections>
+                                    <action selector="imageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tch-Q7-0ZN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="KK6-Cm-Gi5">
+                                <rect key="frame" x="177.5" y="223.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="KzW-9E-2w1"/>
+                                    <constraint firstAttribute="width" constant="20" id="W5i-B7-eKe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivF-1e-95t">
+                                <rect key="frame" x="0.0" y="627" width="132" height="30"/>
+                                <state key="normal" title="Explode everything"/>
+                                <connections>
+                                    <action selector="explodePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f7I-MC-Y4w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qdf-eq-uX1" secondAttribute="trailing" constant="10" id="23r-er-EkV"/>
+                            <constraint firstItem="qdf-eq-uX1" firstAttribute="top" secondItem="zuF-GD-3cZ" secondAttribute="bottom" constant="60" id="7h5-Et-4QZ"/>
+                            <constraint firstItem="zuF-GD-3cZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9WD-xh-FeT"/>
+                            <constraint firstItem="1UY-gV-pep" firstAttribute="top" secondItem="KK6-Cm-Gi5" secondAttribute="bottom" constant="50" id="BtO-Oz-wo8"/>
+                            <constraint firstItem="qdf-eq-uX1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Cbz-IO-sd5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zuF-GD-3cZ" secondAttribute="trailing" constant="20" id="If6-hV-Gxa"/>
+                            <constraint firstItem="KK6-Cm-Gi5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Nre-1y-Q3a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ivF-1e-95t" secondAttribute="bottom" constant="10" id="deN-gU-R5S"/>
+                            <constraint firstItem="1UY-gV-pep" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="evJ-ie-AQ5"/>
+                            <constraint firstItem="ivF-1e-95t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f9J-3N-tb3"/>
+                            <constraint firstItem="1UY-gV-pep" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fHN-Wk-qpw"/>
+                            <constraint firstItem="zuF-GD-3cZ" firstAttribute="top" secondItem="1UY-gV-pep" secondAttribute="bottom" constant="50" id="vta-9D-VIw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="duckImage" destination="KK6-Cm-Gi5" id="8eb-BM-oV7"/>
+                        <outlet property="explodeButton" destination="ivF-1e-95t" id="wnt-ME-NkR"/>
+                        <outlet property="imageButton" destination="1UY-gV-pep" id="d6G-NM-31Z"/>
+                        <outlet property="label" destination="zuF-GD-3cZ" id="nLj-hj-ked"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="369" height="269"/>
+        <image name="duck" width="512" height="512"/>
+    </resources>
+</document>
